@@ -1,11 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
 import {
+  Hero,
+  Navbar,
   About,
   Contact,
   Experience,
   Feedbacks,
-  Hero,
-  Navbar,
   Tech,
   Works,
   StarsCanvas,
