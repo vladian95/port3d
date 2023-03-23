@@ -5,6 +5,7 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import { github, telegram } from '../assets';
 
 const Contact = () => {
   const formRef = useRef();
@@ -111,13 +112,28 @@ const Contact = () => {
             {loading ? 'sending...' : 'ОТПРАВИТЬ'}
           </button>
         </form>
+        <div className="flex justify-between items-center mt-6">
+          <a href="tel:+79786400847">+7978-640-08-47</a>
+          <div className="flex items-center">
+            <a href="" className="h-8 w-8 mr-6">
+              <img src={telegram} alt="telegram" />
+            </a>
+            <a
+              href="https://github.com/vladian95"
+              target="_blank"
+              className="h-9 w-9"
+            >
+              <img src={github} alt="github" />
+            </a>
+          </div>
+        </div>
       </motion.div>
 
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        {/* <EarthCanvas /> */}
       </motion.div>
     </div>
   );
