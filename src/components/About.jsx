@@ -35,17 +35,20 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <p className={styles.sectionSubText}>ВВЕДЕНИЕ</p>
+        <h2 className={styles.sectionHeadText}>Обзор</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae quia
-        neque eaque quam ratione quasi aperiam eum numquam ad id tempore,
-        deserunt saepe dicta illo culpa, laboriosam nobis aliquam porro!
+        Я разработчик интерфейсов с опытом работы в HTML5, CSS3, JavaScript, а
+        также работаю с таким фреймворкам, как React. Я быстро учусь и тесно
+        сотрудничаю с клиентами для создания эффективных, масштабируемых и
+        удобных в использовании решений. Люблю делать красивые и удобные
+        интерфейсы с различным визуалом, функционалом и анимацией. Давайте
+        работать вместе, чтобы воплотить ваши идеи в жизнь!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

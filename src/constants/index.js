@@ -32,29 +32,29 @@ export const navLinks = [
   },
   {
     id: 'work',
-    title: 'Work',
+    title: 'Работа',
   },
   {
     id: 'contact',
-    title: 'Contact',
+    title: 'Контакты',
   },
 ];
 
 const services = [
   {
-    title: 'Web Developer',
+    title: 'Разработка',
     icon: web,
   },
   {
-    title: 'React Native Developer',
+    title: 'Сайтов',
     icon: mobile,
   },
   {
-    title: 'Backend Developer',
+    title: 'Приложений',
     icon: backend,
   },
   {
-    title: 'Content Creator',
+    title: 'Веб Дизайн',
     icon: creator,
   },
 ];

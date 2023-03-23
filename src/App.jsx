@@ -5,7 +5,7 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
+  Footer,
   Tech,
   Works,
   StarsCanvas,
@@ -23,10 +23,10 @@ const App = () => {
           <About />
           <Experience />
           <Tech />
-          <Works />
-          <Feedbacks />
-          <Contact />
-          <StarsCanvas />
+          {/* <Works /> */}
+          <Footer />
+          {/* <Contact />
+          <StarsCanvas /> */}
         </div>
       </div>
     </BrowserRouter>

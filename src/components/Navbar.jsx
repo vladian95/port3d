@@ -21,7 +21,11 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img
+            src={logo}
+            alt="logovlad"
+            className="w-[90px] h-[90px] object-contain rounded-full "
+          />
           <span className="text-white text-[18px] font-bold cursor-pointer">
             vladian95
           </span>
