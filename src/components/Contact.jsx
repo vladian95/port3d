@@ -8,15 +8,55 @@ import { slideIn } from '../utils/motion';
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setFrom] = useState({
+  const [form, setForm] = useState({
     name: '',
     email: '',
     message: '',
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        'service_3ag8w8t',
+        'template_s8l9y7k',
+        {
+          from_name: form.name,
+          to_name: 'Vlad',
+          from_email: form.email,
+          to_email: 'kvankvan1995@gmail.com',
+          message: form.message,
+        },
+        '0wsWru7IKiJD08sgf'
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert('Спасибо Вам! Я скоро с вами свяжусь =)');
+
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          });
+        },
+        (error) => {
+          setLoading(false);
+
+          console.error(error);
+
+          alert('Что-то пошло не так =(');
+        }
+      );
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -38,7 +78,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder=""
+              placeholder="Введите ваше имя:"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -49,7 +89,7 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder=""
+              placeholder="Введите ваш email:"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -60,7 +100,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="asd"
+              placeholder="Введите ваше сообщения:"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
