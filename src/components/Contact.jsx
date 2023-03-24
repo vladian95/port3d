@@ -115,7 +115,11 @@ const Contact = () => {
         <div className="flex justify-between items-center mt-6">
           <a href="tel:+79786400847">+7978-640-08-47</a>
           <div className="flex items-center">
-            <a href="" className="h-8 w-8 mr-6">
+            <a
+              href="https://t.me/vladian95"
+              target="_blank"
+              className="h-8 w-8 mr-6"
+            >
               <img src={telegram} alt="telegram" />
             </a>
             <a

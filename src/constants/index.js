@@ -19,8 +19,9 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
+  marusya,
+  eshop,
+  klassov,
   tripguide,
   threejs,
 } from '../assets';
@@ -28,7 +29,7 @@ import {
 export const navLinks = [
   {
     id: 'about',
-    title: 'About',
+    title: 'Обо мне',
   },
   {
     id: 'work',
@@ -116,55 +117,32 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
+    title: 'Web Разработка',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Разработка и сопровождение веб-приложений с использованием React.js и другие сопутствующие технологии.',
+      'Сотрудничество с кросс-функциональными командами, включая дизайнеров, менеджеров по продуктам и других разработчиков, для создания высококачественных продуктов.',
+      'Внедрение адаптивного дизайна и обеспечение кроссбраузерной совместимости.',
+      'Участие в обзорах кода и предоставление конструктивной обратной связи другим разработчикам.',
     ],
   },
   {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2021 - Feb 2022',
+    title: 'Визуальный интерфейс',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Разработка визуального интерфейса с помощью современных технологий',
+      'Gsap - библиотека для реализации анимации любого уровня сложности с помощью JavaScript ',
+      'Framer Motion - это новая готовая к работе веб-моушен-библиотека React с открытым исходным кодом. С точки зрения прототипирования, Framer всегда идеально подходил для разработки продвинутых анимаций и жестов.',
+      'СSS animation - это предлагаемый модуль для каскадных таблиц стилей, который позволяет анимировать элементы HTML-документа с помощью CSS.',
+      'ThreeJs - легковесная кроссбраузерная библиотека JavaScript, используемая для создания и отображения анимированной компьютерной 3D графики при разработке веб-приложений.',
     ],
   },
   {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
-    iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
+    title: 'Web Дизайн UI/UX',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Сотрудничество с людьми имеющими многолетний опыт в Веб Дизайне.',
+      'Индивидульный подход к каждому клиенту.',
+      'Работа с такими графическими редакторами такие как Figma, PhotoShop',
+      'Photoshop — многофункциональный графический редактор, разрабатываемый и распространяемый компанией Adobe Systems. В основном работает с растровыми изображениями, однако имеет некоторые векторные инструменты.',
+      'Figma — онлайн сервис для разработки интерфейсов и прототипирования с возможностью организации совместной работы в режиме реального времени.',
     ],
   },
 ];
@@ -198,37 +176,16 @@ const testimonails = [
 
 const projects = [
   {
-    name: 'Car Rent',
+    name: 'Landing page',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'Веб-сайт для MAKE-UP артиста, в котором описываются все виды деятельности, подробное описание каждой из работ и контактная информация. ',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
-  },
-  {
-    name: 'Job IT',
-    description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
+        name: 'emailjs',
         color: 'green-text-gradient',
       },
       {
@@ -236,28 +193,49 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: jobit,
+    image: marusya,
     source_code_link: 'https://github.com/',
   },
   {
-    name: 'Trip Guide',
+    name: 'E-commerce App',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'Приложения интернет магазина для он-лайн покупок, с добавлением товара в корзину. При создании приложения по back-end части использовался NodeJS, база данных MongoDB.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'mongoDB',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'styledComponents',
         color: 'pink-text-gradient',
       },
     ],
-    image: tripguide,
+    image: eshop,
+    source_code_link: 'https://github.com/',
+  },
+  {
+    name: 'Control service',
+    description:
+      'Этот проект был осуществлен по заказу клиента, который осуществляет удаленный контроль качества продаж для других компаний. ',
+    tags: [
+      {
+        name: 'gulp',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'emailjs',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'scss',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: klassov,
     source_code_link: 'https://github.com/',
   },
 ];

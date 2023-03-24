@@ -28,6 +28,9 @@ import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
 
 import carrent from './carrent.png';
+import marusya from './marusya.png';
+import eshop from './e-shop.png';
+import klassov from './klassov.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
@@ -40,12 +43,15 @@ export {
   github,
   telegram,
   menu,
+  eshop,
   close,
+  marusya,
   css,
   docker,
   figma,
   git,
   html,
+  klassov,
   javascript,
   mongodb,
   nodejs,

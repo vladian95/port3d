@@ -5,7 +5,6 @@ import {
   About,
   Contact,
   Experience,
-  Footer,
   Tech,
   Works,
   StarsCanvas,
@@ -25,7 +24,6 @@ const App = () => {
           <Tech />
           <Works />
           <Contact />
-          {/* <Footer /> */}
           {/* <StarsCanvas /> */}
         </div>
       </div>
