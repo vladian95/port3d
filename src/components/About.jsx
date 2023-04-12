@@ -1,71 +1,58 @@
 import React from 'react';
-import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import { useTranslation } from 'react-i18next';
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ id, index, icon }) => {
+  // исправлено: добавлен аргумент id и исправлено название аргумента services на id
+  const { t } = useTranslation(); // исправлено: извлечение функции t из useTranslation
+  const handleClick = () => {
+    navigator.vibrate(100);
+  };
+
   return (
-    <Tilt
-      className="xs:w-[250px] w-full"
-      style={{
-        transformStyle: 'preserve-3d',
-        transform: 'perspective(1000px)',
-      }}
+    <motion.div
+      onClick={handleClick}
+      variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+      className="xs:w-[250px] w-full cursor-pointer w-full  shadow-card rounded-[20px] "
     >
-      <motion.div
-        variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-        className="w-full green-pink-gradient p-[1px]  shadow-card   "
-      >
-        <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
-          className="bg-tertiary rounded=[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
-          <img
-            src={icon}
-            alt={title}
-            className="w-16 h-16 object-contain"
-            style={{ transform: 'translateZ(50px)' }}
-          />
-          <h3 className="text-white text-[20px] font-bold text-center">
-            {title}
-          </h3>
-        </div>
-      </motion.div>
-    </Tilt>
+      <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] border-[2px]  flex justify-evenly items-center flex-col hover:scale-[1.1] transition-all ease-in-out">
+        <img src={icon} className="w-16 h-16 object-contain" />
+        <h3 className="text-white text-[20px] font-bold text-center">
+          {t(`services.${id}.title`)} {/* исправлено: заменено link.id на id */}
+        </h3>
+      </div>
+    </motion.div>
   );
 };
 
 const About = () => {
+  const { t } = useTranslation(); // исправлено: извлечение функции t из useTranslation
   return (
     <>
       <motion.div variants={textVariant()}>
-        {/* <p className={styles.sectionSubText}>ВВЕДЕНИЕ</p> */}
-        <h2 className={styles.sectionHeadText}>Обо мне.</h2>
+        <h2 className={styles.sectionHeadText}>{t('aboutTitle')}</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Я разработчик интерфейсов с опытом работы в HTML5, CSS3, JavaScript, а
-        также работаю с таким фреймворкам, как React. Я быстро учусь и тесно
-        сотрудничаю с клиентами для создания эффективных, масштабируемых и
-        удобных в использовании решений. Люблю делать красивые и удобные
-        интерфейсы с различным визуалом, функционалом и анимацией. Давайте
-        работать вместе, чтобы воплотить ваши идеи в жизнь!
+        {t('aboutText')}
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((services, index) => (
-          <ServiceCard key={services.title} index={index} {...services} />
-        ))}
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
+        {services.map(
+          (
+            { id, icon },
+            index // исправлено: заменено services на { id, icon }
+          ) => (
+            <ServiceCard key={id} index={index} id={id} icon={icon} /> // исправлено: добавлен аргумент id и исправлено название аргумента services на id
+          )
+        )}
       </div>
     </>
   );

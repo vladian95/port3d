@@ -1,12 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
 
   return (
     <nav
@@ -39,7 +46,7 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`}>{t(`navLinks.${link.id}.title`)}</a>
             </li>
           ))}
         </ul>
@@ -72,6 +79,20 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
+        </div>
+        <div className="flex gap-2">
+          <button
+            className="text-black w-[30px] h-[30px] bg-white rounded-full text-xs transition ease-in delay-100  hover:scale-150"
+            onClick={() => changeLanguage('en')}
+          >
+            Eng
+          </button>
+          <button
+            className="text-black w-[30px] h-[30px] bg-white rounded-full text-xs transition ease-in delay-100 hover:scale-150"
+            onClick={() => changeLanguage('ru')}
+          >
+            Rus
+          </button>
         </div>
       </div>
     </nav>

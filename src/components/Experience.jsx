@@ -7,7 +7,8 @@ import 'react-vertical-timeline-component/style.min.css';
 import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
-import { textVariant } from '../utils/motion';
+import { fadeIn } from '../utils/motion';
+import { useTranslation } from 'react-i18next';
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -44,11 +45,11 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <motion.div variants={textVariant()}>
-        {/* <p className={`${styles.sectionSubText} `}>Несколько примеров</p> */}
-        <h2 className={`${styles.sectionHeadText} `}>Опыт работы.</h2>
+      <motion.div variants={fadeIn('', '', 0.1, 1)}>
+        <h2 className={`${styles.sectionHeadText} `}>{t('experienceTitle')}</h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">

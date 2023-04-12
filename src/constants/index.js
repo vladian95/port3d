@@ -29,33 +29,26 @@ import {
 export const navLinks = [
   {
     id: 'about',
-    title: 'Обо мне',
   },
   {
     id: 'work',
-    title: 'Работа',
   },
   {
     id: 'contact',
-    title: 'Контакты',
   },
 ];
 
 const services = [
   {
-    title: 'Разработка',
-    icon: web,
-  },
-  {
-    title: 'Сайтов',
+    id: 'dev',
     icon: mobile,
   },
   {
-    title: 'Приложений',
+    id: 'sites',
     icon: backend,
   },
   {
-    title: 'Веб Дизайн',
+    id: 'app',
     icon: creator,
   },
 ];
@@ -186,7 +179,7 @@ const projects = [
       },
     ],
     image: marusya,
-    source_code_link: 'https://github.com/',
+    source_code_link: 'https://github.com/vladian95/marusya_look',
   },
   {
     name: 'E-commerce App',
@@ -207,7 +200,7 @@ const projects = [
       },
     ],
     image: eshop,
-    source_code_link: 'https://github.com/',
+    source_code_link: 'https://github.com/vladian95/eco-shop-react',
   },
   {
     name: 'Control service',
@@ -228,7 +221,7 @@ const projects = [
       },
     ],
     image: klassov,
-    source_code_link: 'https://github.com/',
+    source_code_link: 'https://github.com/vladian95/klassov_Quality',
   },
 ];
 

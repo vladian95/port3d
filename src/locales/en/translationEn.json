@@ -1,0 +1,40 @@
+{
+  "navLinks": {
+    "about": {
+      "title": "About"
+    },
+    "work": {
+      "title": "Work"
+    },
+    "contact": {
+      "title": "Contact"
+    }
+  },
+  "heroTitle": "Hi, my name is ",
+  "heroName": "Vlad",
+  "heroProf": "I'm a Front-End Developer!",
+  "aboutTitle": "About me",
+  "aboutText": "I am an interface developer with experience in HTML5, CSS3, JavaScript, and also work with a framework like React. I am a fast learner and work closely with clients to create efficient, scalable and user-friendly solutions. I like to make beautiful and convenient interfaces with various visualizations, functionality and animation. Let's work together to bring your ideas to life.",
+  "services": {
+    "dev": {
+      "title": "Development"
+    },
+    "sites": {
+      "title": "Websites"
+    },
+    "app": {
+      "title": "Web applications"
+    }
+  },
+  "experienceTitle": "Work experience",
+  "worksTitle": "Projects",
+  "worksText": "The following projects demonstrate my skills and experience with real examples my job. Each project is briefly described with links to repositories code and live demos in it. This reflects my ability to solve complex problems, work with different technologies and efficiently manage projects.",
+  "contactsTitle": "Contacts",
+  "inputName": "Your name",
+  "placeholderName": "Enter your name:",
+  "inputEmail": "Your email",
+  "placeholderEmail": "Enter your email:",
+  "inputMessage": "Your message",
+  "placeholderMessage": "Enter your message:",
+  "contactsBtn": "SEND"
+}

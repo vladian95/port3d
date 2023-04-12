@@ -6,8 +6,14 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { github, telegram } from '../assets';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const handleClick = () => {
+    navigator.vibrate(100);
+  };
+  const { t } = useTranslation();
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -65,67 +71,73 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.5, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Отправьте информацию</p>
-        <h3 className={styles.sectionHeadText}>Контакты</h3>
+        <h3 className={styles.sectionHeadText}>{t('contactsTitle')}</h3>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Ваше Имя</span>
+            <span className="text-white font-medium mb-4">
+              {t('inputName')}
+            </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Введите ваше имя:"
+              placeholder={t('placeholderName')}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Ваш Email</span>
+            <span className="text-white font-medium mb-4">
+              {t('inputEmail')}
+            </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Введите ваш email:"
+              placeholder={t('placeholderEmail')}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Ваше Сообщения</span>
+            <span className="text-white font-medium mb-4">
+              {t('inputMessage')}
+            </span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Введите ваше сообщения:"
+              placeholder={t('placeholderMessage')}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           <button
+            onClick={handleClick}
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:scale-[1.1] transition-all ease-in-out"
           >
-            {loading ? 'sending...' : 'ОТПРАВИТЬ'}
+            {loading ? 'sending...' : t('contactsBtn')}
           </button>
         </form>
         <div className="flex justify-between items-center mt-6">
-          <a href="tel:+79786400847">+7978-640-08-47</a>
+          <a href="tel:+79786400847">+7-978-640-08-47</a>
           <div className="flex items-center">
             <a
               href="https://t.me/vladian95"
               target="_blank"
-              className="h-8 w-8 mr-6"
+              className="h-8 w-8 mr-6 hover:scale-[1.4] transition-all ease-in-out"
             >
               <img src={telegram} alt="telegram" />
             </a>
             <a
               href="https://github.com/vladian95"
               target="_blank"
-              className="h-9 w-9"
+              className="h-9 w-9 hover:scale-[1.4] transition-all ease-in-out"
             >
               <img src={github} alt="github" />
             </a>
@@ -137,7 +149,7 @@ const Contact = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        {/* <EarthCanvas /> */}
       </motion.div>
     </div>
   );
