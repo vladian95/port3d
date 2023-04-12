@@ -22,7 +22,7 @@ const ServiceCard = ({ id, index, icon }) => {
       <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] border-[2px]  flex justify-evenly items-center flex-col hover:scale-[1.1] transition-all ease-in-out">
         <img src={icon} className="w-16 h-16 object-contain" />
         <h3 className="text-white text-[20px] font-bold text-center">
-          {t(`services.${id}.title`)} {/* исправлено: заменено link.id на id */}
+          {t(`services.${id}.title`)}
         </h3>
       </div>
     </motion.div>

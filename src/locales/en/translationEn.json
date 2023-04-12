@@ -29,6 +29,17 @@
   "experienceTitle": "Work experience",
   "worksTitle": "Projects",
   "worksText": "The following projects demonstrate my skills and experience with real examples my job. Each project is briefly described with links to repositories code and live demos in it. This reflects my ability to solve complex problems, work with different technologies and efficiently manage projects.",
+  "projects": {
+    "land": {
+      "desc": "A website for a MAKE-UP artist, which describes all types of activities, a detailed description of each of the works and contact information."
+    },
+    "ecomm": {
+      "desc": "Applications of the online store for online purchases, with the addition of goods to the cart. When creating the application for the back-end part, Node JS, the MongoDB database, was used."
+    },
+    "control": {
+      "desc": "This project was carried out by order of a client who performs remote quality control of sales for other companies."
+    }
+  },
   "contactsTitle": "Contacts",
   "inputName": "Your name",
   "placeholderName": "Enter your name:",
