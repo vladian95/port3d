@@ -5,12 +5,13 @@ import {
 import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import { styles } from '../styles';
-import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { fadeIn } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
 
 const ExperienceCard = ({ experience }) => {
+  const { t } = useTranslation();
+  const points = experience.points || [];
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -21,22 +22,14 @@ const ExperienceCard = ({ experience }) => {
       iconStyle={{ background: '#fff' }}
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
+        <h3 className="text-white text-[24px] font-bold">
+          {t(`experiences.${experience.id}.title`)}
+        </h3>
       </div>
-
       <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
+        {points.map((point, index) => (
+          <li key={index}>
+            {t(`experiences.${experience.id}.points.${index}`)}
           </li>
         ))}
       </ul>
@@ -46,6 +39,41 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   const { t } = useTranslation();
+
+  const experiences = [
+    {
+      id: 'webapp',
+      title: t('experiences.webapp.title'),
+      points: [
+        t('experiences.webapp.points.0'),
+        t('experiences.webapp.points.1'),
+        t('experiences.webapp.points.2'),
+        t('experiences.webapp.points.3'),
+      ],
+    },
+    {
+      id: 'visual',
+      title: t('experiences.visual.title'),
+      points: [
+        t('experiences.visual.points.0'),
+        t('experiences.visual.points.1'),
+        t('experiences.visual.points.2'),
+        t('experiences.visual.points.3'),
+        t('experiences.visual.points.4'),
+      ],
+    },
+    {
+      id: 'design',
+      title: t('experiences.design.title'),
+      points: [
+        t('experiences.design.points.0'),
+        t('experiences.design.points.1'),
+        t('experiences.design.points.2'),
+        t('experiences.design.points.3'),
+        t('experiences.design.points.4'),
+      ],
+    },
+  ];
   return (
     <>
       <motion.div variants={fadeIn('', '', 0.1, 1)}>
