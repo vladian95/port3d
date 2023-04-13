@@ -9,7 +9,6 @@ import menu from './menu.svg';
 import close from './close.svg';
 
 import css from './tech/css.png';
-import docker from './tech/docker.png';
 import figma from './tech/figma.png';
 import git from './tech/git.png';
 import html from './tech/html.png';
@@ -22,20 +21,14 @@ import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
 
-import meta from './company/meta.png';
-import shopify from './company/shopify.png';
-import starbucks from './company/starbucks.png';
-import tesla from './company/tesla.png';
-
-import carrent from './carrent.png';
 import marusya from './marusya.png';
 import eshop from './e-shop.png';
 import klassov from './klassov.png';
-import jobit from './jobit.png';
-import tripguide from './tripguide.png';
+import wave from './wave.svg';
 
 export {
   logo,
+  wave,
   backend,
   creator,
   mobile,
@@ -47,7 +40,6 @@ export {
   close,
   marusya,
   css,
-  docker,
   figma,
   git,
   html,
@@ -60,11 +52,4 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
 };

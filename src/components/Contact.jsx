@@ -119,7 +119,7 @@ const Contact = () => {
           <button
             onClick={handleClick}
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:scale-[1.1] transition-all ease-in-out"
+            className="contact-btn bg-tertiary"
           >
             {loading ? 'sending...' : t('contactsBtn')}
           </button>
@@ -149,7 +149,7 @@ const Contact = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        {/* <EarthCanvas /> */}
+        <EarthCanvas />
       </motion.div>
     </div>
   );
